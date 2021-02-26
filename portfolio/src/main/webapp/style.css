@@ -289,7 +289,7 @@ section .title::after{
     color: black;
     
 }
-.proj-content .card .card-body a::hover{
+.proj-content .card .card-body .btn-primary::hover{
     background-color: black;
     color: white;
     
