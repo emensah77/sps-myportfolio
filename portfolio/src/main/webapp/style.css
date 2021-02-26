@@ -276,7 +276,7 @@ section .title::after{
     height: 100px;
 }
 .proj-content .card .card-body .btn-primary{
-    font-size: 10px;
+    font-size: 15px;
     padding: 5px 10px;
     margin-top: 15px;
     border-radius: 15px;
