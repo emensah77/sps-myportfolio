@@ -276,6 +276,11 @@ section .title::after{
     height: 100px;
 }
 .proj-content .card .card-body .btn-primary{
+    font-size: 20px;
+    padding: 5px 10px;
+    margin-top: 15px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
     width: fit-content;
     height: fit-content;
     background-color: white;
