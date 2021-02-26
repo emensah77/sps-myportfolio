@@ -285,6 +285,9 @@ section .title::after{
     height: max-content;
     background-color: yellow;
 }
+.proj-content .card .card-body btn-primary::hover{
+    background-color: blue;
+}
 .proj-content .card .card-body a{
     color: black;
     font-size: 12px;
