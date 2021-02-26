@@ -271,6 +271,9 @@ section .title::after{
     background: darkblue;
     transition: all 0.3s ease;
 }
+.proj-content .card .card-img-top{
+    width: fit-content;
+}
 .projects .proj-content .card:hover{
     background: yellow;
     color: darkblue;
