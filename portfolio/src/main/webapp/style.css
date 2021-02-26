@@ -275,6 +275,9 @@ section .title::after{
     width: auto;
     height: 100px;
 }
+.proj-content .card .card-body .btn-primary{
+    background-color: yellow;
+}
 .proj-content .card .card-body a{
     color: white;
     
