@@ -289,6 +289,11 @@ section .title::after{
     color: black;
     
 }
+.proj-content .card .card-body a::hover{
+    background-color: black;
+    color: white;
+    
+}
 .projects .proj-content .card:hover{
     background: yellow;
     color: darkblue;
