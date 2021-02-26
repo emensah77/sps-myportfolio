@@ -275,6 +275,10 @@ section .title::after{
     width: auto;
     height: 100px;
 }
+.proj-content .card .card-body a{
+    color: white;
+    
+}
 .projects .proj-content .card:hover{
     background: yellow;
     color: darkblue;
