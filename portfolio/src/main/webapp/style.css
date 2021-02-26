@@ -276,10 +276,12 @@ section .title::after{
     height: 100px;
 }
 .proj-content .card .card-body .btn-primary{
-    background-color: yellow;
+    width: fit-content;
+    height: fit-content;
+    background-color: white;
 }
 .proj-content .card .card-body a{
-    color: white;
+    color: black;
     
 }
 .projects .proj-content .card:hover{
