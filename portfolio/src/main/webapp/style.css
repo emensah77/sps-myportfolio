@@ -137,7 +137,7 @@ section{
     justify-content: space-between;
 }
 
-.section .title{
+section .title{
     position: relative;
     text-align: center;
     font-size: 40px;
@@ -147,7 +147,7 @@ section{
     font-family: 'Ubuntu', sans-serif;
 }
 
-.section .title::before{
+section .title::before{
     content: "";
     position: absolute;
     width: 180px;
@@ -312,6 +312,57 @@ section .title::after{
 }
 
 
+.skills .skills-content .left .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.skills .skills-content .right .bars{
+    margin-bottom: 15px;
+}
+
+.skills .skills-content .right .info{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    justify-content: space-between;
+}
+
+.skills .skills-content .right span{
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.skills .skills-content .right .line{
+    height: 5px;
+    width: 100%;
+    background: white;
+    position: relative;
+}
+.skills .skills-content .right .line::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    left: 0;
+    top: 0;
+    background: blue;
+    
+    
+    
+    
+}
+
+.skills-content .right .html::before{
+    width: 80%;
+}
+
+.skills-content .right .java::before{
+    width: 50%;
+}
+.skills-content .right .python::before{
+    width: 70%;
+}
 
 
 
