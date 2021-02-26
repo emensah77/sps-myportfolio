@@ -273,7 +273,7 @@ section .title::after{
 }
 .proj-content .card .card-img-top{
     width: 100px;
-    height: auto;
+    height: 100px;
 }
 .projects .proj-content .card:hover{
     background: yellow;
