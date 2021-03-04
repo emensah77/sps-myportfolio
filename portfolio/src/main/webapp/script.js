@@ -13,6 +13,14 @@
 // limitations under the License.
 
 
+async function showServerMessage() {
+  const responseFromServer = await fetch('/new');
+  const textFromResponse = await responseFromServer.text();
+
+  const dateContainer = document.getElementById('date-container');
+  dateContainer.innerText = textFromResponse;
+}
+
 $(document).ready(function(){
     $(window).scroll(function(){
         if(this.scrollY > 20){
@@ -29,10 +37,3 @@ $(document).ready(function(){
     });
 });
 
-async function showServerMessage() {
-  const responseFromServer = await fetch('/new');
-  const textFromResponse = await responseFromServer.text();
-
-  const dateContainer = document.getElementById('date-container');
-  dateContainer.innerText = textFromResponse;
-}
