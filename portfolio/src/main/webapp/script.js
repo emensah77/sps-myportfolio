@@ -12,9 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/**
- * Adds a random greeting to the page.
- */
+
 $(document).ready(function(){
     $(window).scroll(function(){
         if(this.scrollY > 20){
@@ -30,3 +28,11 @@ $(document).ready(function(){
         $('.menu-btn i').toggleClass("active");
     });
 });
+
+async function showServerMessage() {
+  const responseFromServer = await fetch('/new');
+  const textFromResponse = await responseFromServer.text();
+
+  const dateContainer = document.getElementById('date-container');
+  dateContainer.innerText = textFromResponse;
+}
