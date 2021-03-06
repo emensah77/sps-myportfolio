@@ -27,16 +27,9 @@ async function getServerMessages() {
   // reference to create HTML.
   const messages = await responseFromServer.json();
 
-  const messageListElement = document.getElementById('messages-container');
-  statsListElement.innerHTML = '';
-
-
-  messageListElement.appendChild(
-      createListElement('1st: ' + messages.x));
-  messageListElement.appendChild(
-      createListElement('2nd: ' + messages.y));
-  messageListElement.appendChild(
-      createListElement('3rd: ' + messages.z));    
+  console.log(messages.x);
+  console.log(messages.y);
+  console.log(messages.z);   
 }
 
 function createListElement(text) {
