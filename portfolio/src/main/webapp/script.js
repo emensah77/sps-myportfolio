@@ -21,6 +21,17 @@ async function showServerMessage() {
   dateContainer.innerText = textFromResponse;
 }
 
+async function getServerMessages() {
+  const responseFromServer = await fetch('/new');
+  // The json() function returns an object that contains fields that we can
+  // reference to create HTML.
+  const messages = await responseFromServer.json();
+
+    console.log(messages.x);
+    console.log(messages.y);
+    console.log(messages.z);
+
+}
 $(document).ready(function(){
     $(window).scroll(function(){
         if(this.scrollY > 20){
