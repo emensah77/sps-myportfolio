@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 /** Handles requests sent to the /new URL. Try running a server and navigating to /new */
 @WebServlet("/new")
 public class NewServlet extends HttpServlet {
-  private ArrayList<String> messages;
+  ArrayList<String> messages = new ArrayList<String>();
 
   
   @Override

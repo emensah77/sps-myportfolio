@@ -32,11 +32,11 @@ async function getServerMessages() {
 
 
   messageListElement.appendChild(
-      createListElement('1st: ' + messages.x));
+      createListElement('1st: ' + messages.get(0)));
   messageListElement.appendChild(
-      createListElement('2nd: ' + messages.y));
+      createListElement('2nd: ' + messages.get(1)));
   messageListElement.appendChild(
-      createListElement('3rd: ' + messages.z));    
+      createListElement('3rd: ' + messages.get(2)));    
 }
 
 function createListElement(text) {
