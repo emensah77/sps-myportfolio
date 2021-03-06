@@ -15,16 +15,21 @@ public class NewServlet extends HttpServlet {
   
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    response.setContentType("text/html;");
+    
+    String json = convertToJsonUsingGson(messages);
+    response.setContentType("application/json;");
+    response.getWriter().println(json);
     response.getWriter().println("<h1>Hello World!</h1>");
     response.getWriter().println("<p>My Servlet is running!</p>");
     messages.add("I like to drink Coca-cola");
     messages.add("I come from Ghana");
     messages.add("I like to cook");
 
+    
+
 }
 
-private String convertToJsonUsingGson(NewServlet messages) {
+private String convertToJsonUsingGson(ArrayList messages) {
     Gson gson = new Gson();
     String json = gson.toJson(messages);
     return json;
