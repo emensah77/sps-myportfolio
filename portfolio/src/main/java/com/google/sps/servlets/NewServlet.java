@@ -18,6 +18,7 @@ public class NewServlet extends HttpServlet {
     
     String json = convertToJsonUsingGson(messages);
     response.setContentType("application/json;");
+    response.getWriter().println(json);
     response.getWriter().println("<h1>Hello World!</h1>");
     response.getWriter().println(json);
     response.getWriter().println("<p>My Servlet is running!</p>");
