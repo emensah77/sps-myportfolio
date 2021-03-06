@@ -17,8 +17,8 @@ async function showServerMessage() {
   const responseFromServer = await fetch('/new');
   const textFromResponse = await responseFromServer.text();
 
-  const dateContainer = document.getElementById('message-container');
-  dateContainer.innerText = textFromResponse;
+  const dateContainer = document.getElementById('messages-container');
+  dateContainer.innerText = textFromResponse[Math.floor(Math.random() * textFromResponse.length)];
 }
 
 async function getServerMessages() {
@@ -28,15 +28,8 @@ async function getServerMessages() {
   const messages = await responseFromServer.json();
 
   const messageListElement = document.getElementById('message-container');
-  statsListElement.innerHTML = '';
-
-
-  messageListElement.appendChild(
-      createListElement('1st: ' + messages.x));
-  messageListElement.appendChild(
-      createListElement('2nd: ' + messages.y));
-  messageListElement.appendChild(
-      createListElement('3rd: ' + messages.z));    
+  messageListElement.innerText = messages[Math.floor(Math.random() * messages.length)];
+     
 }
 
 function createListElement(text) {

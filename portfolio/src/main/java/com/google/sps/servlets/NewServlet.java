@@ -20,7 +20,6 @@ public class NewServlet extends HttpServlet {
     response.setContentType("application/json;");
     response.getWriter().println(json);
     response.getWriter().println("<h1>Hello World!</h1>");
-    response.getWriter().println(json);
     response.getWriter().println("<p>My Servlet is running!</p>");
     messages.add("I like to drink Coca-cola");
     messages.add("I come from Ghana");
