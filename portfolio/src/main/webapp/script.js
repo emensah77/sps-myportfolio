@@ -29,15 +29,11 @@ async function getServerMessages() {
   const messages = await responseFromServer.json();
   
   const messageListElement = document.getElementById('message-container');
-  messageListElement.innerHTML = '';
-  
-  messageListElement.appendChild(
-      createListElement('Start time: ' + messages.x));
-  messageListElement.appendChild(
-      createListElement('Current time: ' + messages.y));
-  messageListElement.appendChild(
-      createListElement('Max memory: ' + messages.z));
-
+  messageListElement.innerHTML = ''
+  var x;
+  for (x in myObj) {
+  document.getElementById("messages-container").innerHTML += x + "<br>";
+}
      
 }
 function createListElement(text) {
