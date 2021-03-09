@@ -41,13 +41,7 @@
             </div>
 
         </section>
-
-        <form action="/form-handler" method="POST">
-        <p>Enter some text here:</p>
-        <textarea name="text-input">hello world</textarea>
-        <br/>
-        <input type="submit" />
-        </form>
+        
                 
         <!--This requests message from server-->
         <section class="fun" id="fun">
@@ -187,5 +181,31 @@
             </div>
 
         </section>
+
+        <!--This is a form that sends POST messages to server-->
+        <section class="contact-form" id="contac-form">
+        <h3 style="font-weight: 100; font-family: Arial, Helvetica, sans-serif; font-size: 25px;"> Contact form </h3>
+        <div class="container">
+        <form action="/form-handler" method="POST">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+        <label for="country">Country</label>
+        <select id="country" name="country">
+        <option value="australia">Australia</option>
+        <option value="canada">Canada</option>
+        <option value="usa">USA</option>
+        </select>
+
+        <label for="subject">Subject</label>
+        <textarea id="text-input" name="text-input" placeholder="Write something.." style="height:200px"></textarea>
+
+        <input type="submit" />
+        </form>
+        </div>
+    </section>
     </body>
 </html>
