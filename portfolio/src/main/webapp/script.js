@@ -25,7 +25,7 @@ async function getServerMessages() {
   const responseFromServer = await fetch('/new');
   // The json() function returns an object that contains fields that we can
   // reference to create HTML.
-  const messages = await responseFromServer.json();
+  const messages = await responseFromServer.text();
   var arr = ["Hi", "How", "You"];
   
    //for(var i in messages){
