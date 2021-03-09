@@ -41,13 +41,19 @@
             </div>
 
         </section>
+                
+        <!--This requests message from server-->
+        <section class="fun" id="fun">
         <h1>Fetching data from Server using js</h1>
         <p>This loads data from the server once button is clicked.</p>
-        <button onclick="showServerMessage()">
-            Get message from server 
+        <div id="fun-but">        
+        <button  id="but" onclick="showServerMessage()">
+            Click to generate random fun messages 
         </button>
-<p>How to loop through all properties in a JSON object.</p>        
-        <p id="messages-container"></p>
+        </div>
+        </section>
+                
+        <p style="text-align: center;  font-size: 24px; font-weight: bold; color: blue;" id="messages-container"></p>
         <p>Click <a href="/new">here</a> to see the server response directly.</p>
 
         

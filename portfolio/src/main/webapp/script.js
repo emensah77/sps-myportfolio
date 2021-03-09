@@ -18,10 +18,13 @@ async function showServerMessage() {
   const textFromResponse = await responseFromServer.json();
 
   //const dateContainer = document.getElementById('message-container');
-  
+  var arr = [];
   for (x in textFromResponse) {
-  document.getElementById("messages-container").innerHTML += textFromResponse[x] + "<br>";
+      arr.push(textFromResponse[x]);
+  
 }
+    var message = document.getElementById("messages-container");
+    message.innerHTML = arr[Math.floor(Math.random() * arr.length)];
 }
 
 async function getServerMessages() {

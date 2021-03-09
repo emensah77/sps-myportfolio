@@ -65,7 +65,12 @@
     display: none;
 }
 
-
+.fun-but .but{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
 /* Home section styling */
 .home{
     display: flex;
