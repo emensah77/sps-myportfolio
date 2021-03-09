@@ -15,7 +15,7 @@
 
 async function showServerMessage() {
   const responseFromServer = await fetch('/new');
-  const textFromResponse = await responseFromServer.text();
+  const textFromResponse = await responseFromServer.json();
 
   const dateContainer = document.getElementById('messages-container');
   dateContainer.innerText = textFromResponse;
