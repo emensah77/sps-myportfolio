@@ -29,7 +29,7 @@ async function getServerMessages() {
   const messages = await responseFromServer.json();
   obj = JSON.parse(messages);
   for (x in obj) {
-  document.getElementById("messages-container").innerHTML += x;
+  document.getElementById("messages-container").innerHTML += myobj[x];
 }
   //const messageListElement = document.getElementById('message-container');
   //messageListElement.innerHTML = arr[Math.floor(Math.random() * arr.length)];
