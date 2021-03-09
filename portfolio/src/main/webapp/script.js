@@ -18,7 +18,7 @@ async function showServerMessage() {
   const textFromResponse = await responseFromServer.text();
 
   const dateContainer = document.getElementById('messages-container');
-  dateContainer.innerText = textFromResponse[Math.floor(Math.random() * textFromResponse.length)];
+  dateContainer.innerText = textFromResponse;
 }
 
 async function getServerMessages() {
