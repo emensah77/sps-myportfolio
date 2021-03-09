@@ -15,10 +15,13 @@
 
 async function showServerMessage() {
   const responseFromServer = await fetch('/new');
-  const textFromResponse = await responseFromServer.text();
+  const textFromResponse = await responseFromServer.json();
 
-  const dateContainer = document.getElementById('message-container');
-  dateContainer.innerText = textFromResponse;
+  //const dateContainer = document.getElementById('message-container');
+  
+  for (x in textFromResponse) {
+  document.getElementById("messages-container").innerHTML += textFromResponse[x] + "<br>";
+}
 }
 
 async function getServerMessages() {
