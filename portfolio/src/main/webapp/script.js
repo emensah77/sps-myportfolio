@@ -32,7 +32,7 @@ async function getServerMessages() {
     arr.push(messages[i]);
     }
   const messageListElement = document.getElementById('message-container');
-  messageListElement.innerText = arr[Math.floor( Math.floor(Math.random()*arr.length))];
+  messageListElement.innerHTML = arr[Math.floor( Math.floor(Math.random()*arr.length))];
   //arr[Math.floor(Math.random() * arr.length)];
      
 }
