@@ -29,7 +29,7 @@ public class NewServlet extends HttpServlet {
 
 }
 
-private String convertToJsonUsingGson(ArrayList messages) {
+private String convertToJsonUsingGson(ArrayList<String> messages) {
     Gson gson = new Gson();
     String json = gson.toJson(messages);
     return json;
