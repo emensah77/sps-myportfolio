@@ -26,13 +26,13 @@ async function getServerMessages() {
   // The json() function returns an object that contains fields that we can
   // reference to create HTML.
   const messages = await responseFromServer.json();
-  var arr = [];
+  var arr = ["Hi", "How", "You"];
   
-   for(var i in messages){
-    arr.push(messages[i]);
-    }
+   //for(var i in messages){
+    //arr.push(messages[i]);
+    //}
   const messageListElement = document.getElementById('message-container');
-  messageListElement.innerText = arr[Math.floor( Math.floor(Math.random()*arr.length))];
+  messageListElement.innerText = arr[Math.floor(Math.random() * arr.length)];
   //arr[Math.floor(Math.random() * arr.length)];
      
 }
