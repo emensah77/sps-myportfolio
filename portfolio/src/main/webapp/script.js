@@ -28,10 +28,11 @@ async function getServerMessages() {
   
   const messages = await responseFromServer.json();
   
-  const messageListElement = document.getElementById('message-container');
-  messageListElement.innerHTML = ''
-  var x;
-  for (x in myObj) {
+  //const messageListElement = document.getElementById('message-container');
+  //messageListElement.innerHTML = ''
+  var x, obj;
+  obj = JSON.parse(messages);
+  for (x in messages) {
   document.getElementById("messages-container").innerHTML += x + "<br>";
 }
      
