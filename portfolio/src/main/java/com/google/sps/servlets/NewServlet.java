@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /** Handles requests sent to the /new URL. Try running a server and navigating to /new */
-@WebServlet("/new-st")
+@WebServlet("/new")
 public class NewServlet extends HttpServlet {
   HashMap<Integer, String> messages = new HashMap<Integer, String>();
 
