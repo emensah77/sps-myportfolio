@@ -25,16 +25,25 @@ async function getServerMessages() {
   const responseFromServer = await fetch('/new');
   // The json() function returns an object that contains fields that we can
   // reference to create HTML.
-  var obj, x;
+  
   const messages = await responseFromServer.json();
-  obj = JSON.parse(messages);
-  for (x in obj) {
-  document.getElementById("messages-container").innerHTML += myobj[x];
-}
-  //const messageListElement = document.getElementById('message-container');
-  //messageListElement.innerHTML = arr[Math.floor(Math.random() * arr.length)];
-  //arr[Math.floor(Math.random() * arr.length)];
+  
+  const messageListElement = document.getElementById('message-container');
+  messageListElement.innerHTML = '';
+  
+  messageListElement.appendChild(
+      createListElement('Start time: ' + messages.x));
+  messageListElement.appendChild(
+      createListElement('Current time: ' + messages.y));
+  messageListElement.appendChild(
+      createListElement('Max memory: ' + messages.z));
+
      
+}
+function createListElement(text) {
+  const liElement = document.createElement('li');
+  liElement.innerText = text;
+  return liElement;
 }
 
 
