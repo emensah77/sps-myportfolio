@@ -8,9 +8,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /** Handles requests sent to the /new URL. Try running a server and navigating to /new */
-@WebServlet("/new")
+@WebServlet("/new-st")
 public class NewServlet extends HttpServlet {
-  ArrayList<String> messages = new ArrayList<String>();
+  HashMap<Integer, String> messages = new HashMap<Integer, String>();
 
   
   @Override
@@ -21,15 +21,15 @@ public class NewServlet extends HttpServlet {
     response.getWriter().println(json);
     response.getWriter().println("<h1>Hello World!</h1>");
     response.getWriter().println("<p>My Servlet is running!</p>");
-    messages.add("I like to drink Coca-cola");
-    messages.add("I come from Ghana");
-    messages.add("I like to cook");
+    messages.put(1, "I like to drink Coca-cola");
+    messages.put(2, "I come from Ghana");
+    messages.put(3, "I like to cook");
 
     
 
 }
 
-private String convertToJsonUsingGson(ArrayList<String> messages) {
+private String convertToJsonUsingGson(HashMap<Integer, String> messages) {
     Gson gson = new Gson();
     String json = gson.toJson(messages);
     return json;

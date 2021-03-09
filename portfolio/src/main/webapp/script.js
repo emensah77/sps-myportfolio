@@ -17,7 +17,7 @@ async function showServerMessage() {
   const responseFromServer = await fetch('/new');
   const textFromResponse = await responseFromServer.text();
 
-  const dateContainer = document.getElementById('messages-container');
+  const dateContainer = document.getElementById('message-container');
   dateContainer.innerText = textFromResponse;
 }
 
@@ -25,23 +25,19 @@ async function getServerMessages() {
   const responseFromServer = await fetch('/new');
   // The json() function returns an object that contains fields that we can
   // reference to create HTML.
+  var obj, x;
   const messages = await responseFromServer.json();
-  var arr = [];
-  
-   for(var i in messages){
-    arr.push(i, messages[i]);
-    }
-  const messageListElement = document.getElementById('message-container');
-  messageListElement.innerHTML = arr[Math.floor(Math.random() * arr.length)];
+  obj = JSON.parse(messages);
+  for (x in obj) {
+  document.getElementById("messages-container").innerHTML += x;
+}
+  //const messageListElement = document.getElementById('message-container');
+  //messageListElement.innerHTML = arr[Math.floor(Math.random() * arr.length)];
   //arr[Math.floor(Math.random() * arr.length)];
      
 }
 
-function createListElement(text) {
-  const liElement = document.createElement('li');
-  liElement.innerText = text;
-  return liElement;
-}
+
 $(document).ready(function(){
     $(window).scroll(function(){
         if(this.scrollY > 20){
