@@ -41,16 +41,24 @@
             </div>
 
         </section>
+
+        <form action="/form-handler" method="POST">
+        <p>Enter some text here:</p>
+        <textarea name="text-input">hello world</textarea>
+        <br/>
+        <input type="submit" />
+        </form>
                 
         <!--This requests message from server-->
         <section class="fun" id="fun">
-        <h1>Fetching data from Server using js</h1>
-        <p>This loads data from the server once button is clicked.</p>
-        <div id="fun-but">        
-        <button  id="but" onclick="showServerMessage()">
-            Click to generate random fun messages 
-        </button>
-        </div>
+            <div id="fun-but">
+                <h1>Fetching data from Server using js</h1>
+                    <p>This loads data from the server once button is clicked.</p>
+                
+                        <button  id="but" onclick="showServerMessage()">
+                            Click to generate random fun messages 
+                        </button>
+            </div>
         </section>
                 
         <p style="text-align: center;  font-size: 24px; font-weight: bold; color: blue;" id="messages-container"></p>

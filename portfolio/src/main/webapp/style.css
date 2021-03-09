@@ -125,13 +125,19 @@
     background: none;
 
 }
+.fun .fun-but{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
 
 /* all similar content styling code */
 
 section{
     padding: 100px 0px;
 }
-.about, .projects, .skills{
+.about, .projects, .skills, .fun{
     font-family: 'Ubuntu', sans-serif;
 
 }
