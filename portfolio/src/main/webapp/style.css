@@ -1,9 +1,560 @@
-#content {
-  margin-left: auto;
-  margin-right: auto;
-  width: 650px;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Ubuntu:ital,wght@0,300;0,500;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
 }
 
-#greeting-container {
-  margin-top: 20px;
+.navbar{
+    position: fixed;
+    width: 100%;
+    padding: 15px 0;
+    background: yellow;
+    font-family: "Ubuntu", sans-serif;
+    transition: all 0.3s ease;
+    z-index: 999;
+    
+
+}
+.navbar .sticky{
+    padding: 15px 0;
+    background: crimson;
+
+}
+.navbar .logo a {
+    color: darkblue;
+    font-size: 35px;
+    font-weight: 600;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+}
+.navbar .menu li a{
+    color:darkblue;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+
+}
+.navbar .menu li a:hover{
+    color:darkgreen;
+}
+
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+/*menu btn styling */
+.menu-btn{
+    color:#fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+
+/* Home section styling */
+.home{
+    display: flex;
+    background: url("images/banner.png") no-repeat center;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    font-family: 'Ubuntu', sans-serif;
+    background-size: cover;
+    background-attachment: fixed;
+
+
+
+}
+.home .max-width{
+    margin: auto 0 auto 40px;
+
+}
+.home .home-content .text-1{
+    font-size: 27px;
+
+}
+.home .home-content .text-2{
+    font-size: 35px;
+    font-weight: 600;
+    margin-left: -3px;
+
+}
+.home .home-content .text-3{
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.home .home-content .text-3 span{
+    color: yellow;
+    font-weight: 500;
+}
+.home .home-content a{
+    display: inline-block;
+    background:yellow;
+    color: darkblue;
+    font-size: 20px;
+    padding: 5px 10px;
+    margin-top: 15px;
+    border-radius: 15px;
+    border: 2px solid yellow;
+    transition: all 0.3s ease;
+}
+
+.home .home-content a:hover{
+    color:yellow;
+    background: none;
+
+}
+
+/* all similar content styling code */
+
+section{
+    padding: 100px 0px;
+}
+.about, .projects, .skills{
+    font-family: 'Ubuntu', sans-serif;
+
+}
+.about .about-content, .projects .proj-content, .skills .skills-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+section .title::before{
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 3px;
+    bottom: 0px;
+    left: 50%;
+    background: black;
+    transform: translateX(-50%);
+
+}
+
+section .title::after{
+    
+    position: absolute;
+    font-size: 20px;
+    color:darkblue;
+    bottom: -12px;
+    left: 50%;
+    padding: 5px;
+    background: #fff;
+    transform: translateX(-50%);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*about section styling*/
+
+
+
+.about .title::after{
+    content: "Who I am";
+}
+
+
+
+
+.about .about-content .left{
+    width: 45%;
+
+}
+
+
+.about .about-content .left img{
+
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 200px;
+
+}
+
+
+.about .about-content .right{
+    width: 55%;
+
+}
+
+.about .about-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+
+}
+
+.about .about-content .right .text span{
+    color: darkblue;
+}
+
+.about .about-content .right p{
+    text-align: justify;
+}
+.about .about-content .right a{
+    
+        display: inline-block;
+        background:yellow;
+        color: darkblue;
+        font-size: 20px;
+        font-weight: 500;
+        padding: 5px 15px;
+        margin-top: 15px;
+        border-radius: 15px;
+        border: 2px solid yellow;
+        transition: all 0.3s ease;
+    
+}
+
+.about .about-content .right a:hover{
+    color: yellow;
+    background: darkblue;
+}
+
+
+
+
+/* Projects styling section */
+.projects{
+    color: white;
+
+    
+}
+.projects .title::after{
+    content: "Projects completed";
+
+}
+.projects .proj-content .card{
+    width: calc(33% - 20px);
+    text-align: center;
+    border-radius: 12px;
+    padding: 20px 25px;
+    cursor: pointer;
+    background: darkblue;
+    transition: all 0.3s ease;
+}
+.proj-content .card .card-img-top{
+    width: auto;
+    height: 100px;
+}
+.proj-content .card .card-body .btn-primary{
+    font-size: 12px;
+    padding: 5px 10px;
+    margin-top: 20px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    width: max-content;
+    height: max-content;
+    background-color: white;
+}
+
+.proj-content .card .card-body .btn-primary::hover{
+    background-color: black;
+    color: white;
+    
+}
+.projects .proj-content .card:hover{
+    background: yellow;
+    color: darkblue;
+   
+}
+.projects .proj-content .card .box{
+    transition: all 0.3s ease;
+
+}
+.projects .proj-content .card:hover .box{
+    transform: scale(1.05);
+}
+
+.projects .proj-content .card i{
+    font-size: 20px;
+    color: yellow;
+    transition: color 0.3s ease;
+}
+
+.projects .proj-content .card:hover i{
+    color: blue;
+
+}
+.projects .proj-content .card .text{
+    font-size: 20px;
+    font-weight: 500;
+    margin:10px 0 7px 0;
+}
+
+
+
+
+
+
+/* Skills section styling*/
+
+.skills .skills-content .column{
+    width: calc(50% - 30px);
+}
+
+
+.skills .skills-content .left .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.skills .skills-content .right .bars{
+    margin-bottom: 15px;
+}
+
+.skills .skills-content .right .info{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    justify-content: space-between;
+}
+
+.skills .skills-content .right span{
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.skills .skills-content .right .line{
+    height: 5px;
+    width: 100%;
+    background: white;
+    position: relative;
+}
+.skills .skills-content .right .line::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    left: 0;
+    top: 0;
+    background: blue;
+    
+    
+    
+    
+}
+
+.skills-content .right .html::before{
+    width: 80%;
+}
+
+.skills-content .right .java::before{
+    width: 50%;
+}
+.skills-content .right .python::before{
+    width: 70%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* responsive media query start */
+@media (max-width: 1300px){
+    .home .max-width{
+        margin-left: 0px;
+
+    }
+}
+@media (max-width: 1300px){
+    .about .about-content .left img{
+
+        height: 350px;
+        width: 350px;
+        
+    }
+    
+    }
+@media (max-width: 991px){
+        .max-width{
+            
+            padding: 0 50px;
+        
+        }
+}
+@media (max-width: 710px){
+
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: yellow;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+
+    }
+    .navbar .menu.active{
+            left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+
+    .home .home-content .text-2{
+        font-size: 35px;
+        font-weight: 600;
+        margin-left: -3px;
+    
+    }
+    .home .home-content .text-3{
+        font-size: 35px;
+        
+    }
+    .home .home-content a{
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+
+    .max-width{
+        max-width: 800px;
+    }
+
+    .about .about-content .column{
+        width: 50%;
+
+
+    }
+
+    .about .about-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+
+
+    }
+    .about .about-content .right{
+        flex: 100%;
+
+
+    }
+
+    .projects .proj-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+
+    
+
+}
+@media (max-width: 690px){
+
+    .max-width{
+        padding: 0 23px;
+    }
+
+    .home .home-content .text-2{
+        font-size: 60px;
+        
+    
+    }
+    .home .home-content .text-3{
+        font-size: 32px;
+        
+    }
+
+    .home .home-content a{
+        font-size: 20px;
+        
+    }
+    .projects .proj-content .card{
+        width: 100%;
+    }
+    
+
+}
+@media (max-width: 500px){
+
+    .home .home-content .text-2{
+        font-size: 50px;
+        
+    
+    }
+    .home .home-content .text-3{
+        font-size: 32px;
+        
+    }
+    
+
 }

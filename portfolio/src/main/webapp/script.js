@@ -12,17 +12,28 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/**
- * Adds a random greeting to the page.
- */
-function addRandomGreeting() {
-  const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
 
-  // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+async function showServerMessage() {
+  const responseFromServer = await fetch('/new');
+  const textFromResponse = await responseFromServer.text();
 
-  // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
+  const dateContainer = document.getElementById('date-container');
+  dateContainer.innerText = textFromResponse;
 }
+
+$(document).ready(function(){
+    $(window).scroll(function(){
+        if(this.scrollY > 20){
+            $('.navbar').addClass("sticky");
+        }
+        else{
+            $('.navbar').removeClass("sticky");
+        }
+    });
+    //toogle menu/navbar script
+    $('.menu-btn').click(function(){
+        $('.navbar .menu').toggleClass("active");
+        $('.menu-btn i').toggleClass("active");
+    });
+});
+
