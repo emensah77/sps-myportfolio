@@ -89,8 +89,44 @@ input[type=submit]:hover {
   padding: 20px;
 }
 
+/* Splash screen styling */
+.intro{
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    transition: 1s;
+}
 
+.splash-header{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: yellow;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
 
+.splash{
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+}
+.splash.active{
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+.splash.fade{
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
 
 
 /*menu btn styling */
