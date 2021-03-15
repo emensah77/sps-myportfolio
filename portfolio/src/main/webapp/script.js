@@ -27,6 +27,15 @@ async function showServerMessage() {
     message.innerHTML = arr[Math.floor(Math.random() * arr.length)];
 }
 
+async function getSentiments(){
+    const responseFromServer = await fetch('/sentiment-analyzer');
+    const messages = await responseFromServer.json();
+
+    var x;
+    for (x in messages) {
+    document.getElementById("sentiment-container").innerHTML += messages[x] + "<br>";
+}
+}
 async function getServerMessages() {
   const responseFromServer = await fetch('/client-messages');
   // The json() function returns an object that contains fields that we can
@@ -42,11 +51,7 @@ async function getServerMessages() {
 }
      
 }
-function createListElement(text) {
-  const liElement = document.createElement('li');
-  liElement.innerText = text;
-  return liElement;
-}
+
 
 
 $(document).ready(function(){
