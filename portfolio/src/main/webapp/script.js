@@ -13,6 +13,24 @@
 // limitations under the License.
 
 // Splash screen
+
+
+$(document).ready(function(){
+    $(window).scroll(function(){
+        if(this.scrollY > 20){
+            $('.navbar').addClass("sticky");
+        }
+        else{
+            $('.navbar').removeClass("sticky");
+        }
+    });
+    //toogle menu/navbar script
+    $('.menu-btn').click(function(){
+        $('.navbar .menu').toggleClass("active");
+        $('.menu-btn i').toggleClass("active");
+    });
+});
+
 let intro = document.querySelector('.intro');
 let logo = document.querySelector('.splash-header');
 let logoSpan = document.querySelectorAll('.splash');
@@ -89,20 +107,4 @@ async function getServerMessages() {
 }
 
 
-
-$(document).ready(function(){
-    $(window).scroll(function(){
-        if(this.scrollY > 20){
-            $('.navbar').addClass("sticky");
-        }
-        else{
-            $('.navbar').removeClass("sticky");
-        }
-    });
-    //toogle menu/navbar script
-    $('.menu-btn').click(function(){
-        $('.navbar .menu').toggleClass("active");
-        $('.menu-btn i').toggleClass("active");
-    });
-});
 
