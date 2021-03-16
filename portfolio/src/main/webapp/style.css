@@ -116,6 +116,7 @@ input[type=submit]:hover {
     display: inline-block;
     bottom: -20px;
     opacity: 0;
+    font-size: 3rem;
 }
 .splash.active{
     bottom: 0;
