@@ -19,6 +19,10 @@ public class NewServlet extends HttpServlet {
     messages.put(1, "I like to drink Coca-cola");
     messages.put(2, "I come from Ghana");
     messages.put(3, "I like to cook");
+    messages.put(4, "I like watching sci-fi movies");
+    messages.put(5, "I am the first child of my family");
+    messages.put(6, "I have two siblings");
+    messages.put(7, "My two siblings are girls");
     
     String json = convertToJsonUsingGson(messages);
     response.setContentType("application/json;");
