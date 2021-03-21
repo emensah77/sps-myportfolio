@@ -41,15 +41,29 @@
             </div>
 
         </section>
-        <h1>Fetching data from Server using js</h1>
-        <p>This loads data from the server once button is clicked.</p>
-        <button onclick="showServerMessage();">
-            Get message from server 
-        </button>
-        <p id="message-container"></p>
+        
+                
+        <!--This requests message from server-->
+        <section class="fun" id="fun">
+            <div id="fun-but">
+                <h1>Fetching data from Server using js</h1>
+                    <p>This loads data from the server once button is clicked.</p>
+                
+                        <button  id="but" onclick="showServerMessage()">
+                            Click to generate random fun messages 
+                        </button>
+
+                        <button  id="but" onclick="getServerMessages()">
+                            Click to see messages in DataStore 
+                        </button>                        
+            </div>
+        </section>
+                
+        <p style="text-align: center;  font-size: 24px; font-weight: bold; color: blue;" id="messages-container"></p>
+        <p style="text-align: center;  font-size: 24px; font-weight: bold; color: blue;" id="message-container"></p>
         <p>Click <a href="/new">here</a> to see the server response directly.</p>
 
-
+        
         <!--about section start-->
         <section class="about" id="about">
             <div class="max-width">
@@ -172,5 +186,31 @@
             </div>
 
         </section>
+
+        <!--This is a form that sends POST messages to server-->
+        <section class="contact-form" id="contac-form">
+        <h3 style="font-weight: 100; font-family: Arial, Helvetica, sans-serif; font-size: 25px;"> Contact form </h3>
+        <div class="container">
+        <form action="/form-handler" method="POST">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+        <label for="country">Country</label>
+        <select id="country" name="country">
+        <option value="australia">Australia</option>
+        <option value="canada">Canada</option>
+        <option value="usa">USA</option>
+        </select>
+
+        <label for="subject">Subject</label>
+        <textarea id="text-input" name="text-input" placeholder="Write something.." style="height:200px"></textarea>
+
+        <input type="submit" />
+        </form>
+        </div>
+    </section>
     </body>
 </html>

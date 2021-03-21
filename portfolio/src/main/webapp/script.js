@@ -15,11 +15,39 @@
 
 async function showServerMessage() {
   const responseFromServer = await fetch('/new');
-  const textFromResponse = await responseFromServer.text();
+  const textFromResponse = await responseFromServer.json();
 
-  const dateContainer = document.getElementById('message-container');
-  dateContainer.innerText = textFromResponse;
+  //const dateContainer = document.getElementById('message-container');
+  var arr = [];
+  for (x in textFromResponse) {
+      arr.push(textFromResponse[x]);
+  
 }
+    var message = document.getElementById("messages-container");
+    message.innerHTML = arr[Math.floor(Math.random() * arr.length)];
+}
+
+async function getServerMessages() {
+  const responseFromServer = await fetch('/client-messages');
+  // The json() function returns an object that contains fields that we can
+  // reference to create HTML.
+  
+  const messages = await responseFromServer.json();
+  
+  //const messageListElement = document.getElementById('message-container');
+  //messageListElement.innerHTML = ''
+  var x;
+  for (x in messages) {
+  document.getElementById("message-container").innerHTML += messages[x] + "<br>";
+}
+     
+}
+function createListElement(text) {
+  const liElement = document.createElement('li');
+  liElement.innerText = text;
+  return liElement;
+}
+
 
 $(document).ready(function(){
     $(window).scroll(function(){
