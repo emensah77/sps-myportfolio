@@ -28,7 +28,7 @@ async function showServerMessage() {
 }
 
 async function getServerMessages() {
-  const responseFromServer = await fetch('/new');
+  const responseFromServer = await fetch('/client-messages');
   // The json() function returns an object that contains fields that we can
   // reference to create HTML.
   
@@ -36,10 +36,9 @@ async function getServerMessages() {
   
   //const messageListElement = document.getElementById('message-container');
   //messageListElement.innerHTML = ''
-  var x, obj;
-  obj = JSON.parse(messages);
+  var x;
   for (x in messages) {
-  document.getElementById("messages-container").innerHTML += x + "<br>";
+  document.getElementById("message-container").innerHTML += messages[x] + "<br>";
 }
      
 }
