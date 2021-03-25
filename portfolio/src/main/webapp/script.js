@@ -31,6 +31,8 @@ $(document).ready(function(){
     });
 });
 
+
+
 let intro = document.querySelector('.intro');
 let logo = document.querySelector('.splash-header');
 let logoSpan = document.querySelectorAll('.splash');
@@ -66,6 +68,11 @@ window.addEventListener('DOMContentLoaded', ()=>{
 
 
 })
+function createMap() {
+  const map = new google.maps.Map(
+      document.getElementById('map'),
+      {center: {lat: 37.422, lng: -122.084}, zoom: 16});
+}
 
 async function showServerMessage() {
   const responseFromServer = await fetch('/new');
@@ -106,5 +113,20 @@ async function getServerMessages() {
      
 }
 
+$(document).ready(function(){
+    $(window).scroll(function(){
+        if(this.scrollY > 20){
+            $('.navbar').addClass("sticky");
+        }
+        else{
+            $('.navbar').removeClass("sticky");
+        }
+    });
+    //toogle menu/navbar script
+    $('.menu-btn').click(function(){
+        $('.navbar .menu').toggleClass("active");
+        $('.menu-btn i').toggleClass("active");
+    });
+});
 
 

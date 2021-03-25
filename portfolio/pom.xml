@@ -26,12 +26,12 @@
         <artifactId>jsoup</artifactId>
         <version>1.13.1</version>
     </dependency>
-    <!--Cloud Natural Language Library-->
+    <!--Cloud Natural Language Library
     <dependency>
         <groupId>com.google.cloud</groupId>
         <artifactId>google-cloud-language</artifactId>
         <version>1.55.0</version>
-    </dependency>
+    </dependency>-->
     <!--Data Store-->
     <!--<dependency>
         <groupId>com.google.cloud</groupId>
